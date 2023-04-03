@@ -1,26 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const Signup = ({ handleSignIn }) => {
+  const [userData, setUserData] = useState({
+    first_name: "",
+    last_name: "",
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  const handleUserData = (event) => {
+    setUserData((prevFormData) => {
+      return { ...prevFormData, [event.target.name]: event.target.value };
+    });
+  };
+
+  function signUpUser() {
+    console.log("procesiing");
+    console.log(userData);
+    axios
+      .post("http://localhost:5000/register", userData)
+      .then((response) => console.log(response.data));
+  }
   return (
     <div className="right-side">
       <h2>Welcome!</h2>
       <p>Please fill all fields</p>
-      <label htmlFor="email">
-        <p>Email</p>
-      </label>
-      <input placeholder="Email" id="email" name="email" />
+
       <label htmlFor="name">
         <p>Name</p>
       </label>
-      <input placeholder="Name" id="name" name="name" />
+      <input
+        placeholder="Name"
+        id="name"
+        name="first_name"
+        onChange={handleUserData}
+      />
       <label htmlFor="surname">
         <p>Surname</p>
       </label>
-      <input placeholder="Surname" id="surname" name="surname" />
+      <input
+        placeholder="Surname"
+        id="surname"
+        name="last_name"
+        onChange={handleUserData}
+      />
+      <label htmlFor="username">
+        <p>Username</p>
+      </label>
+      <input
+        placeholder="Username"
+        id="username"
+        name="username"
+        onChange={handleUserData}
+      />
+      <label htmlFor="email">
+        <p>Email</p>
+      </label>
+      <input
+        placeholder="Email"
+        id="email"
+        name="email"
+        onChange={handleUserData}
+      />
       <label htmlFor="password">
         <p>Password</p>
       </label>
-      <input placeholder="Password" id="password" name="password" />
+      <input
+        placeholder="Password"
+        id="password"
+        name="password"
+        onChange={handleUserData}
+      />
       <label htmlFor="repeat-password">
         <p>Repeat password</p>
       </label>
@@ -30,7 +82,9 @@ const Signup = ({ handleSignIn }) => {
         name="repeat-password"
       />
 
-      <button className="login-btn">Login</button>
+      <button className="login-btn" onClick={signUpUser}>
+        Register
+      </button>
       <p className="dont-have-acc">
         Already have account?{" "}
         <span onClick={() => handleSignIn()}>Sign in</span>
