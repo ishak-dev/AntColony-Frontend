@@ -20,7 +20,7 @@ const Signup = ({ handleSignIn }) => {
     console.log("procesiing");
     console.log(userData);
     axios
-      .post("http://localhost:5000/register", userData)
+      .post("http://localhost:5000/api/users/register", userData)
       .then((response) => console.log(response.data));
   }
   return (
