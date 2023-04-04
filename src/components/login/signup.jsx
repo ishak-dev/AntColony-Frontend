@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link, Navigate } from "react-router-dom";
 
 const Signup = ({ handleSignIn }) => {
   const [userData, setUserData] = useState({
@@ -21,7 +22,15 @@ const Signup = ({ handleSignIn }) => {
     console.log(userData);
     axios
       .post("http://localhost:5000/api/users/register", userData)
-      .then((response) => console.log(response.data));
+      .then((response) => {
+        console.log(response.data);
+        localStorage.setItem("token", response.data);
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.log(error);
+        console.log(error.message);
+      });
   }
   return (
     <div className="right-side">
