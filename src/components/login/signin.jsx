@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 const Signin = ({ handleSignUp }) => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({
     email: "",
     password: "",
   });
+  const [passHide, setPassHide] = useState(true);
 
   const handleUserData = (event) => {
     setUserData((prevFormData) => {
@@ -34,6 +35,11 @@ const Signin = ({ handleSignUp }) => {
         console.log(error.message);
       });
   };
+
+  const handleHide = () => {
+    setPassHide((prevState) => !prevState);
+  };
+
   return (
     <div className="right-side">
       <h2>Hello</h2>
@@ -41,21 +47,34 @@ const Signin = ({ handleSignUp }) => {
       <label htmlFor="email">
         <p>Email</p>
       </label>
-      <input
-        placeholder="Email"
-        id="email"
-        name="email"
-        onChange={handleUserData}
-      />
-      <label htmlFor="password">
-        <p>Password</p>
-      </label>
-      <input
-        placeholder="Password"
-        id="password"
-        name="password"
-        onChange={handleUserData}
-      />
+      <div className="input-field">
+        <input
+          placeholder="Email"
+          id="email"
+          name="email"
+          onChange={handleUserData}
+        />
+      </div>
+      <div className="input-field">
+        <label htmlFor="password">
+          <p>Password</p>
+        </label>
+        <input
+          placeholder="Password"
+          id="password"
+          name="password"
+          type={passHide ? "password" : "text"}
+          onChange={handleUserData}
+        />
+        {passHide ? (
+          <AiOutlineEyeInvisible
+            className="password-icon"
+            onClick={handleHide}
+          />
+        ) : (
+          <AiOutlineEye className="password-icon" onClick={handleHide} />
+        )}
+      </div>
       <button className="login-btn" type="submit" onClick={signInUser}>
         Login
       </button>
