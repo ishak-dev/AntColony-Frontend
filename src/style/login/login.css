@@ -6,7 +6,7 @@
 }
 .login-container {
   position: relative;
-  width: 1000px;
+  max-width: 1000px;
   display: flex;
   margin: auto;
   vertical-align: middle;
@@ -18,10 +18,17 @@
 .left-side {
   flex-basis: 50%;
   background-color: #ffffff;
+  position: relative;
 }
 .left-side img {
-  animation: logoanimation 5s;
-  animation-iteration-count: infinite;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /* animation: logoanimation 5s;
+  animation-iteration-count: infinite; */
 }
 @keyframes logoanimation {
   0% {
@@ -47,6 +54,9 @@
   text-align: center;
   background-color: #8ac8ac;
 }
+.input-field {
+  position: relative;
+}
 .right-side h2 {
   color: #ffffff;
 }
@@ -71,6 +81,16 @@
 .right-side input:focus {
   border: solid 1px #f8be2c;
   background-color: white;
+}
+
+.password-icon {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  color: #93bdaa;
 }
 .login-btn {
   width: 100%;
