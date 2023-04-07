@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, Navigate } from "react-router-dom";
-
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 const Signup = ({ handleSignIn }) => {
   const [userData, setUserData] = useState({
     first_name: "",
@@ -10,6 +10,7 @@ const Signup = ({ handleSignIn }) => {
     email: "",
     password: "",
   });
+  const [passHide, setPassHide] = useState(true);
 
   const handleUserData = (event) => {
     setUserData((prevFormData) => {
@@ -32,6 +33,10 @@ const Signup = ({ handleSignIn }) => {
         console.log(error.message);
       });
   }
+
+  const handleHide = () => {
+    setPassHide((prevState) => !prevState);
+  };
   return (
     <div className="right-side">
       <h2>Welcome!</h2>
@@ -73,15 +78,26 @@ const Signup = ({ handleSignIn }) => {
         name="email"
         onChange={handleUserData}
       />
-      <label htmlFor="password">
-        <p>Password</p>
-      </label>
-      <input
-        placeholder="Password"
-        id="password"
-        name="password"
-        onChange={handleUserData}
-      />
+      <div className="input-field">
+        <label htmlFor="password">
+          <p>Password</p>
+        </label>
+        <input
+          placeholder="Password"
+          id="password"
+          name="password"
+          type={passHide ? "password" : "text"}
+          onChange={handleUserData}
+        />
+        {passHide ? (
+          <AiOutlineEyeInvisible
+            className="password-icon"
+            onClick={handleHide}
+          />
+        ) : (
+          <AiOutlineEye className="password-icon" onClick={handleHide} />
+        )}
+      </div>
       <label htmlFor="repeat-password">
         <p>Repeat password</p>
       </label>
@@ -89,6 +105,7 @@ const Signup = ({ handleSignIn }) => {
         placeholder="Repeat password"
         id="repeat-password"
         name="repeat-password"
+        type={passHide ? "password" : "text"}
       />
 
       <button className="login-btn" onClick={signUpUser}>
