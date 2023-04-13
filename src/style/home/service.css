@@ -1,0 +1,22 @@
+.service {
+  padding: 5% 10%;
+  text-align: center;
+}
+
+.service-cards {
+  margin-top: 7%;
+  display: flex;
+}
+
+.card {
+  width: 300px;
+  background-color: #f8be2c;
+  border-radius: 14px;
+  color: white;
+  padding: 25px;
+  margin: 0 auto;
+}
+.service-icon {
+  width: 50px;
+  height: 50px;
+}
