@@ -1,17 +1,16 @@
 import React from "react";
+import Navbar from "../components/home/navbar";
+import HomeSection from "../components/home/homeSection";
+import Service from "../components/home/service";
+import About from "../components/home/about";
 
 const Home = () => {
   return (
     <div>
-      Home
-      <button
-        onClick={() => {
-          localStorage.clear();
-          window.location.reload();
-        }}
-      >
-        Logout
-      </button>
+      <Navbar />
+      <HomeSection />
+      <About />
+      <Service />
     </div>
   );
 };
