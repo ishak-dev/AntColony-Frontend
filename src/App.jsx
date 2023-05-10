@@ -6,6 +6,8 @@ import "./App.css";
 import Login from "./pages/login";
 import Home from "./pages/home";
 import Dashboard from "./pages/dashboard";
+import ExecuteProject from "./pages/executeProject";
+import AddProject from "./pages/addProject";
 
 function App() {
   const token = localStorage.getItem("token");
@@ -14,15 +16,19 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route
           path="/login"
           element={decodedToken ? <Navigate to="/dashboard" /> : <Login />}
         />
-        <Route
-          path="/dashboard"
-          element={!decodedToken ? <Navigate to="/login" /> : <Dashboard />}
-        />
+
+        <Route path="dashboard">
+          <Route
+            path=""
+            element={!decodedToken ? <Navigate to="/login" /> : <Dashboard />}
+          />
+          <Route path="executeproject" element={<ExecuteProject />} />
+          <Route path="addproject" element={<AddProject />} />
+        </Route>
       </Routes>
     </div>
   );
