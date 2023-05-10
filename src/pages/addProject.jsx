@@ -1,14 +1,14 @@
 import React from "react";
 import NavbarDashboard from "../components/dashboard/navbarDashboard";
-import "../style/dashboard/dashboard.css";
-const Dashboard = () => {
+import "../style/dashboard/addproject.css";
+const AddProject = () => {
   return (
     <div>
       <NavbarDashboard />
-      Home
-      <div className="dashboard-section"></div>
+      AddProject
+      <div className="addproject-section"></div>
     </div>
   );
 };
 
-export default Dashboard;
+export default AddProject;
