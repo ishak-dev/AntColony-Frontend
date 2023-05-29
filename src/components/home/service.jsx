@@ -3,7 +3,7 @@ import "../../style/home/service.css";
 import { BsHddNetwork } from "react-icons/bs";
 const Service = () => {
   return (
-    <div class="service">
+    <div class="service" id="service">
       <h1>OUR SERVICE</h1>
       <div className="service-cards">
         <div className="card">
