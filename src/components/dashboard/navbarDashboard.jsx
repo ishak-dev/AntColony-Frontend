@@ -2,6 +2,12 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import "../../style/home/navbar.css";
 import { Link } from "react-router-dom";
+
+/*
+This is navigation that is displayed after user is successfully logged in 
+and this navigation is part of dashboard page which is in /pages folder
+it is used to gro from page to page (page that are declared beside Link tag)
+*/
 const NavbarDashboard = () => {
   return (
     <div className="navbar">

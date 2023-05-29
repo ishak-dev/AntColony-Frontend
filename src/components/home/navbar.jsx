@@ -3,6 +3,11 @@ import logo from "../../assets/logo.png";
 import "../../style/home/navbar.css";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+/*
+this is navbar used for landing page, only button is used to route to another page which is login other navigation elements
+are used to scroll to specific elements (Because it is scroll navigation you dont need to specify this components in routes, 
+  but every component need to have ID) 
+*/
 const Navbar = () => {
   return (
     <div className="navbar">

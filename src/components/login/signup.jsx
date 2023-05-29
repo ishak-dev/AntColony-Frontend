@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, Navigate } from "react-router-dom";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+
+/*
+Same as sign in component please read it, difference is that we have more fields, and it is used for new users
+*/
 const Signup = ({ handleSignIn }) => {
   const [userData, setUserData] = useState({
     first_name: "",

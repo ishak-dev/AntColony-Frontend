@@ -1,6 +1,10 @@
 import React from "react";
 import NavbarDashboard from "../components/dashboard/navbarDashboard";
 import "../style/dashboard/addproject.css";
+
+/*
+Again simple boiler code for adding project (user role) 
+*/
 const AddProject = () => {
   return (
     <div>

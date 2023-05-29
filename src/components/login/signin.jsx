@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+
+/*
+Signin form. We defined states for pickuping data that user enter into inputs. After login/signin button is clicked, api is
+called for checking credentials. If it is good we will be redirected to user dashboard (token which we get from api resolve is stroed in localStorage)
+ 
+*/
 const Signin = ({ handleSignUp }) => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({
