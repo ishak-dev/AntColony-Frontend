@@ -1,0 +1,72 @@
+.project-container{
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+}
+.projects{padding: 50px; border: solid 0.1rem #93bdaa;
+}
+.project{
+    padding: 10px 20px;
+    color: white;
+    margin-bottom: 50px;
+    background-color: #93bdaa;
+
+    width: 300px;
+    
+    
+}
+.project-btn{
+    width: 120px;
+    margin: 0 auto;
+}
+
+.project-details{
+padding: 50px; border: solid 0.1rem #93bdaa;
+max-width: 400px;}
+
+.project-title{
+    color: #93bdaa;
+    font-size: 20px;
+}
+.step{
+    padding: 10px 20px;
+    color: white;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: #93bdaa;
+    width: 300px;
+}
+.btn-container{
+    width: 100%;
+    text-align: center;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.project-details input{
+    width: 300px;
+    padding: 10px;
+    border: 0.1rem solid #93bdaa;
+    color: #93bdaa;
+    margin-bottom: 10px;
+    outline: none;
+}
+.project-details select{
+    width: 300px;
+    border: 0.1rem solid #93bdaa;
+    color: #93bdaa;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.project-details textarea{
+    width: 300px;
+    border: 0.1rem solid #93bdaa;
+    outline: none;
+}
