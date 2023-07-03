@@ -1,4 +1,4 @@
-# AntColony Case Study (Backend)
+# AntColony Case Study (Frontend)
 A CI/CD web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack and Docker.
 
 ![Logo](https://github.com/Adnan251/AntColonyBackend/blob/main/Logo.png)
