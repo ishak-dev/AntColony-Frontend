@@ -6,15 +6,6 @@ const HomeSection = () => {
     <div className="home-section" id="home">
       <div className="home-section-description">
         <h1>Manage Your Pipelines</h1>
-        <p>
-          AD ASKDB KAsbd kabsd kabsd kabndk baksd askdaoj sdasjdbnka sbn AD
-          ASKDB KAsbd kabsd kabsd kabndk baksd askdaoj sdasjdbnka sbnAD ASKDB
-          KAsbd kabsd kabsd kabndk baksd askdaoj sdasjdbnka sbnAD ASKDB KAsbd
-          kabsd kabsd kabndk baksd askdaoj sdasjdbnka sbnAD ASKDB KAsbd kabsd
-          kabsd kabndk baksd askdaoj sdasjdbnka sbnAD ASKDB KAsbd kabsd kabsd
-          kabndk baksd askdaoj sdasjdbnka sbnAD ASKDB KAsbd kabsd kabsd kabndk
-          baksd askdaoj sdasjdbnka sbn
-        </p>
         <button className="login-btn get-started-btn">Get Started</button>
       </div>
       <div className="img-section">

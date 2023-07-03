@@ -28,7 +28,12 @@ const Navbar = () => {
         </li>
         <li>
           <ScrollLink to="service" spy={true} smooth={true}>
-            Service
+            Features
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink to="tutorial" spy={true} smooth={true}>
+            Tutorial
           </ScrollLink>
         </li>
         <li>

@@ -4,38 +4,39 @@ import { BsHddNetwork } from "react-icons/bs";
 const Service = () => {
   return (
     <div class="service" id="service">
-      <h1>OUR SERVICE</h1>
+      <h1>OUR FEATURES</h1>
       <div className="service-cards">
         <div className="card">
           <BsHddNetwork className="service-icon" />
           <h3>Manage</h3>
           <p>
-            manage your Pipelines, and work with them without problems, we
-            provide good environment, and dashboard
+            Add, update, and delete projects effortlessly, 
+            empowering you with complete control over your development 
+            endeavors.
           </p>
         </div>
         <div className="card">
           <BsHddNetwork className="service-icon" />
-          <h3>Manage</h3>
+          <h3>Track Pipeline Progress</h3>
           <p>
-            manage your Pipelines, and work with them without problems, we
-            provide good environment, and dashboard
+            Stay informed about the progress of your pipeline at every step. 
+            Track the execution of each stage with ease and efficiency.
           </p>
         </div>
         <div className="card">
           <BsHddNetwork className="service-icon" />
-          <h3>Manage</h3>
+          <h3>Language Flexibility</h3>
           <p>
-            manage your Pipelines, and work with them without problems, we
-            provide good environment, and dashboard
+            Choose from a wide range of languages, including Python, Java, PHP, 
+            JavaScript, and C#. Tailor your projects to your preferred programming language.
           </p>
         </div>
         <div className="card">
           <BsHddNetwork className="service-icon" />
-          <h3>Manage</h3>
+          <h3>DSL Support</h3>
           <p>
-            manage your Pipelines, and work with them without problems, we
-            provide good environment, and dashboard
+          Our innovative DSL provides a user-friendly interface to expedite project setup. 
+          Simply configure your projects with ease and efficiency.
           </p>
         </div>
       </div>
