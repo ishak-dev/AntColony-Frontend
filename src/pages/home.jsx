@@ -3,6 +3,7 @@ import Navbar from "../components/home/navbar";
 import HomeSection from "../components/home/homeSection";
 import Service from "../components/home/service";
 import About from "../components/home/about";
+import Tutorial from "../components/home/tutorial";
 
 /*
 Landing page that consist from several components each of them have id that is declared inside of the component,
@@ -15,6 +16,7 @@ const Home = () => {
       <HomeSection />
       <About />
       <Service />
+      <Tutorial />
     </div>
   );
 };
